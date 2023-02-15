@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+
+<body>
+    <h1 id="code">0</h1>
+    <button onclick="myFunc1()" style="background-color: green;">Increment</button>
+    <button onclick="myFunc2()" style="background-color: red">Decrement</button>
+</body>
+<script>
+    let x = 1;
+
+    function myFunc1(){
+        if(x <= 10) {
+            if(x >= 0 && x<5) {
+                document.getElementById("code").style.color = "green";
+                document.getElementById("code").innerHTML = x;
+                x++;
+            }
+            if(x >= 5 && x<=9) {
+                document.getElementById("code").style.color = "blue";
+                document.getElementById("code").innerHTML = x;
+                x++;
+            }
+        }
+        if(x == 10) {
+            document.getElementById("code").innerHTML = x;
+            document.getElementById("code").style.color = "red";
+        }
+    }
+
+    function myFunc2() {
+        if(x >= 0 && x<=10) {
+            document.getElementById("code").innerHTML = x--;
+            if(x >= 0 && x<5) {
+                document.getElementById("code").style.color = "green";
+            }
+            if(x >= 5 && x<=9) {
+                document.getElementById("code").style.color = "blue";
+            }
+            if(x == 10) {
+            document.getElementById("code").style.color = "red";
+        }
+        }
+        if(x <= 0) {
+            document.getElementById("code").innerHTML = 0;
+        }
+    }
+</script>
+</html>
